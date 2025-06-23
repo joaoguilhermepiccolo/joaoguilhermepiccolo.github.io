@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Título da aplicação -->
+    <title>Contador Geiger</title>
+
+    <!-- === CSS === -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Container principal da aplicação -->
+    <div class="container">
+
+        <!-- === EFEITOS VISUAIS DE OVERLAY === -->
+        <!-- Overlay para efeito glitch em altos níveis de radiação -->
+        <div class="glitch-overlay" id="glitchOverlay"></div>
+
+        <!-- Elemento para distorção visual da tela -->
+        <div class="screen-distortion" id="screenDistortion"></div>
+
+        <!-- === TÍTULO PRINCIPAL === -->
+        <h1>☢️ CONTADOR GEIGER ☢️</h1>
+
+        <!-- === SEÇÃO DE DISPLAY DE RADIAÇÃO === -->
+        <div class="radiation-display">
+            <!-- Label descritivo do nível atual -->
+            <div>Nível de Radiação:</div>
+
+            <!-- Valor numérico da radiação com unidade de medida -->
+            <div class="radiation-level" id="radiationValue">0 μSv/h</div>
+
+            <!-- Barra visual de progresso da radiação -->
+            <div class="radiation-bar">
+                <div class="radiation-fill" id="radiationBar"></div>
+            </div>
+        </div>
+
+        <!-- === STATUS DE SEGURANÇA === -->
+        <!-- Indicador textual do status atual da zona -->
+        <div class="status" id="statusText">ZONA SEGURA</div>
+
+        <!-- === CONTROLE DE AJUSTE DE RADIAÇÃO === -->
+        <div class="slider-container">
+            <!-- Label do slider com valor dinâmico -->
+            <label class="slider-label">
+                Ajustar Radiação: <span id="sliderValue">0 μSv/h</span>
+            </label>
+
+            <!-- Slider para controle manual da radiação -->
+            <input type="range" min="0" max="1000" value="0" class="slider" id="radiationSlider">
+        </div>
+
+        <!-- === BOTÕES DE CONTROLE === -->
+        <div class="controls">
+            <!-- Botão para iniciar a simulação -->
+            <button id="startBtn">▶️ INICIAR</button>
+
+            <!-- Botão para parar a simulação -->
+            <button id="stopBtn">⏹️ PARAR</button>
+
+            <!-- Botão para resetar os valores -->
+            <button id="resetBtn">🔄 RESETAR</button>
+
+            <!-- Botão para teste de áudio -->
+            <button id="testBtn">🔊 TESTE</button>
+        </div>
+
+        <!-- === STATUS DO DISPOSITIVO === -->
+        <!-- Indicador do estado atual do dispositivo -->
+        <div class="status" id="deviceStatus">🔴 Desligado</div>
+    </div>
+
+    <!-- === JAVASCRIPT === -->
+    <!-- Módulos especializados -->
+    <script src="js/audio-system.js"></script>
+    <script src="js/visual-effects.js"></script>
+    <script src="js/device-controller.js"></script>
+    <!-- Controlador principal -->
+    <script src="js/main.js"></script>
+    </head>
+</body>
+
+</html>
