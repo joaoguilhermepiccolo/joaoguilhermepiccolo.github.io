@@ -1,0 +1,167 @@
+/* =================================================================
+   VARIÁVEIS CSS E CONFIGURAÇÕES RAIZ
+   Definições de cores, espaçamentos e propriedades customizáveis
+   ================================================================= */
+
+:root {
+    /* === PALETA DE CORES PRINCIPAL === */
+    --primary-green: #00ff00;
+    --secondary-green: #00cc00;
+    --dark-green: #008800;
+    --accent-green: #004400;
+
+    --warning-yellow: #ffff00;
+    --warning-orange: #ff6600;
+    --danger-red: #ff0000;
+    --danger-dark: #cc0000;
+
+    /* === CORES DE BACKGROUND === */
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2d2d2d;
+    --bg-container: rgba(0, 0, 0, 0.95);
+    --bg-container-secondary: rgba(20, 20, 20, 0.9);
+
+    /* === EFEITOS E TRANSPARÊNCIAS === */
+    --glow-primary: rgba(0, 255, 0, 0.4);
+    --glow-secondary: rgba(0, 255, 0, 0.1);
+    --noise-opacity: 0.3;
+
+    /* === ESPAÇAMENTOS === */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+
+    /* === BORDAS E RAIOS === */
+    --border-radius-sm: 8px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 15px;
+    --border-width: 2px;
+    --border-thin: 1px;
+
+    /* === SOMBRAS === */
+    --shadow-glow: 0 0 30px var(--glow-primary);
+    --shadow-inset: inset 0 0 20px var(--glow-secondary);
+    --shadow-ambient: 0 0 100px var(--glow-secondary);
+
+    /* === TRANSIÇÕES === */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* === FILTROS === */
+    --blur-light: blur(1px);
+    --blur-medium: blur(2px);
+
+    /* === Z-INDEX LAYERS === */
+    --z-background: -1;
+    --z-base: 1;
+    --z-particles: 5;
+    --z-overlay: 10;
+    --z-controls: 20;
+    --z-effects: 50;
+    --z-glitch: 100;
+    --z-scanlines: 1000;
+
+    /* === DIMENSÕES RESPONSIVAS === */
+    --container-max-width: 500px;
+    --button-min-height: 50px;
+    --slider-height: 12px;
+    --slider-thumb-size: 24px;
+    --radiation-bar-height: 25px;
+
+    /* === PROPRIEDADES DE ANIMAÇÃO === */
+    --animation-duration-fast: 0.1s;
+    --animation-duration-normal: 0.3s;
+    --animation-duration-slow: 0.8s;
+    --animation-duration-ambient: 4s;
+}
+
+/* =================================================================
+   VARIÁVEIS DINÂMICAS PARA DIFERENTES ESTADOS
+   ================================================================= */
+
+/* Tema padrão (verde) */
+[data-theme="green"] {
+    --primary-color: var(--primary-green);
+    --secondary-color: var(--secondary-green);
+    --accent-color: var(--dark-green);
+}
+
+/* Tema alternativo (âmbar) - para futuras implementações */
+[data-theme="amber"] {
+    --primary-color: #ffa500;
+    --secondary-color: #ff8c00;
+    --accent-color: #cc6600;
+}
+
+/* Tema alternativo (vermelho) - para futuras implementações */
+[data-theme="red"] {
+    --primary-color: var(--danger-red);
+    --secondary-color: var(--danger-dark);
+    --accent-color: #990000;
+}
+
+/* =================================================================
+   PROPRIEDADES CUSTOMIZADAS PARA ANIMAÇÕES
+   ================================================================= */
+
+:root {
+    /* Propriedades para partículas */
+    --particle-drift: 0px;
+    --particle-drift-end: 0px;
+    --particle-duration: 2s;
+
+    /* Propriedades para efeitos de ruído */
+    --noise-intensity: 0.1;
+    --scanline-speed: 0.1s;
+
+    /* Propriedades para glitch */
+    --glitch-intensity: 1;
+    --distortion-amount: 2px;
+}
+
+/* =================================================================
+   MEDIA QUERIES PARA VARIÁVEIS RESPONSIVAS
+   ================================================================= */
+
+/* Telas pequenas */
+@media (max-width: 480px) {
+    :root {
+        --container-max-width: 320px;
+        --spacing-md: 12px;
+        --spacing-lg: 16px;
+        --button-min-height: 45px;
+    }
+}
+
+/* Telas grandes */
+@media (min-width: 768px) {
+    :root {
+        --container-max-width: 450px;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 35px;
+        --button-min-height: 55px;
+    }
+}
+
+/* Preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-duration-fast: 0s;
+        --animation-duration-normal: 0s;
+        --animation-duration-slow: 0s;
+        --scanline-speed: 0s;
+    }
+}
+
+/* Preferência por alto contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --glow-primary: rgba(0, 255, 0, 0.8);
+        --border-width: 3px;
+        --shadow-glow: 0 0 50px var(--glow-primary);
+    }
+}

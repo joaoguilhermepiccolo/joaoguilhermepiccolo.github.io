@@ -1,0 +1,117 @@
+/* =================================================================
+   CONFIGURAÇÕES DE TIPOGRAFIA
+   Definições de fontes e estilos tipográficos
+   ================================================================= */
+
+/* Importação de fontes (caso necessário) */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+/* Configuração tipográfica global */
+body {
+    font-family: 'Courier New', 'Courier Prime', monospace;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =================================================================
+   ESTILOS TIPOGRÁFICOS ESPECÍFICOS
+   ================================================================= */
+
+/* Título principal com efeito de brilho e animação de cintilação */
+h1 {
+    /* Múltiplas sombras para efeito de brilho intenso */
+    text-shadow:
+        0 0 5px #00ff00,
+        0 0 10px #00ff00,
+        0 0 15px #00ff00,
+        0 0 20px #00ff00;
+
+    /* Tamanho responsivo e estilização */
+    font-size: 24px;
+    position: relative;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+/* Estilo principal dos números de radiação */
+.radiation-level {
+    font-size: clamp(24px, 8vw, 36px);
+    font-weight: bold;
+    text-shadow: 0 0 15px currentColor;
+    position: relative;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+}
+
+/* Label do slider com efeito de brilho */
+.slider-label {
+    font-size: clamp(14px, 4vw, 16px);
+    text-shadow: 0 0 5px #00ff00;
+    font-family: 'Courier New', monospace;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Estilo base dos botões */
+button {
+    font-family: 'Courier New', monospace;
+    font-size: clamp(12px, 3.5vw, 16px);
+    text-shadow: 0 0 5px #00ff00;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Estilo base dos indicadores de status */
+.status {
+    font-size: clamp(12px, 3.5vw, 14px);
+    text-shadow: 0 0 5px currentColor;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Display de radiação */
+.radiation-display {
+    font-size: clamp(14px, 4vw, 18px);
+    font-family: 'Courier New', monospace;
+}
+
+/* =================================================================
+   RESPONSIVIDADE TIPOGRÁFICA
+   ================================================================= */
+
+/* Adaptação para telas muito pequenas */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .radiation-level {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    button {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Adaptação para telas grandes */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .radiation-level {
+        font-size: 42px;
+        letter-spacing: 4px;
+    }
+}
