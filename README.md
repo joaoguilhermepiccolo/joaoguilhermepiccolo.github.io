@@ -2,6 +2,14 @@
 
 Simulador interativo e realista de contador Geiger com efeitos visuais e sonoros avançados. Perfeito para pregar peças, simular ambientes ou itens radioativos para fins educacionais, ou até criar atmosfera em RPGs de terror/ficção científica.
 
+## 🔗 **Link da Página Hosteada**
+
+A página esta sendo hosteada no seguinte endereço devido a limitações de edição do classroom:
+<https://joaoguilhermepiccolo.github.io/>
+
+O repositório utilizado é idêntico a este, mas foi criado pela minha própria conta educacional de maneira pública:
+<https://github.com/joaoguilhermepiccolo/joaoguilhermepiccolo.github.io>
+
 ## 🎛️ **Como Usar**
 
 ### **Controles Principais**
@@ -30,12 +38,6 @@ Simulador interativo e realista de contador Geiger com efeitos visuais e sonoros
 - HTML5, CSS3, JavaScript ES6+
 - Web Audio API para síntese de som
 - Vibration API para feedback tátil
-
-## 📁 **Estrutura**
-
-├── index.html
-├── css/styles.css
-└── js/main.js
 
 ## 🧬 **Curiosidade sobre Radiação**
 
